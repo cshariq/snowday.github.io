@@ -20,14 +20,16 @@ $text-box-color: #B0B0B0;
   margin: 5px;
   border-radius: 30px;
   flex: 1 1 75%;
-  height: 100%;
+  height: calc(100vh - 55px);
   display: block;
-}
 
-@media only screen and (max-width: 767px) {
-  .sectionContainer {
-    height: 100% !important;
-  }
+}
+@media only screen and (max-width: 1300px) { 
+  .sectionContainer { 
+    height: 100% !important; 
+    display: flex; 
+    flex-direction: column; 
+  } 
 }
 
 #chat.light-mode {

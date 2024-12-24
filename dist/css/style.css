@@ -308,12 +308,13 @@ h1 {
   display: block;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
   .sectionContainer {
     height: 100% !important;
+    display: flex;
+    flex-direction: column;
   }
 }
-
 #chat.light-mode {
   background-color: #c5c5c5;
   color: #191C1D;
