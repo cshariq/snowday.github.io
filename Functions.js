@@ -16,7 +16,7 @@ function fetchWeatherData() {
       const url = `https://api.weather.com/v1/geocode/45.42381580972502/-75.70084317193432/aggregate.json?apiKey=e45ff1b7c7bda231216c7ab7c33509b8&products=conditionsshort,fcstdaily10short,fcsthourly24short,nowlinks`;
 
       fetchWeather(url);
-    }, {enableHighAccuracy: true, maximumAge: 10000}
+    }, {enableHighAccuracy: true, timeout: 5000}
   );
 }
 
