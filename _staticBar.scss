@@ -1,0 +1,85 @@
+.staticBar {
+    display: flex;
+    height: 50px;
+    border-radius: 100px;
+    margin: 10px;
+    margin-top: 0px;
+    align-items: center;
+    background: linear-gradient(to right, #DED6FF, #D0EBFF);
+    color: black;
+}
+
+h1 {
+    margin: 10px;
+}
+.staticBar {
+    --light: #b8b9bb;
+    --dark: #28292c;
+  }
+
+.menus:hover {
+    // padding: 50px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menus {
+    color: black;
+    text-decoration: none;
+}
+
+.barItems {
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: flex-end;
+    margin: 20px;
+    margin-bottom: 18px;
+    // font-style: italic;
+    // left: 428px;
+    // top: 36px;
+    // position: fixed;
+    // overflow: visible;
+    // width: 72px;
+    // white-space: nowrap;
+    // text-align: left;
+    // font-family: Roboto;
+    // font-style: normal;
+    // font-weight: lighter;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.barItems:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    scale: 102%;
+    // font-weight: bold;
+} 
+
+#barIcon {
+    margin-left: 20px;
+    scale: 120%;
+}
+#barIcon:hover {
+    margin-left: 20px;
+    scale: 130%;
+}
+
+.userStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-decoration: none;
+    right: 120px;
+    padding: 3px;
+    padding-right: 15px;
+    background-color: black;
+    color:white;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  
+#login:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,146 @@
+$background-color: #ffffff;
+$payment-container-color: #ecf4fe;
+$text-color: rgb(0, 0, 0);
+$static-bar-color: blue;
+$payment-checkout-container-color:#e0efff;
+@mixin mq($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.weather-info{
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.table-elements{
+    border-radius: 50px;
+    padding: 50px;
+}
+.column-elements{
+    border-radius: 100px;
+    height: 30px; /* Fixed height for rows */ 
+    vertical-align: middle; /* Center-align content vertically */
+}
+table, th, td {
+    border-collapse: collapse;
+    table-layout: fixed;
+    // overflow: hidden;
+    // display: grid;
+    padding: 10px;
+}
+th, td {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+th:first-child, td:first-child {
+    border-left: none;
+}
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+// .column-elements:hover {
+//     background-color: #a0b2c5;
+// }
+
+option:hover {
+    background-color: #e1ecf7;
+}
+
+option:active {
+    background-color: #daecfd;
+    color: black;
+}
+
+option:checked {
+    box-shadow: 0 0 10px 100px #daecfd inset;
+    color: black;
+}
+
+option {
+    color: black;
+    border-radius: 50px;
+    padding: 10px;
+    margin:5px;
+    margin-left: 0px;
+}
+
+option:focus {
+    background-color: #daecfd;
+    color: black;
+}
+
+html, body {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: $background-color;
+    // height: 100%;
+}
+
+.paymentMethods {
+    display: inline;
+    padding: 10px;
+    width: 90px;
+}
+
+section {
+    margin: 14px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    @include mq(1300px) {
+        display:flex;
+        // margin-left: 5%;
+        // margin-right: 5%;
+    }
+    // @include mq(1080px) {
+    //     margin-left: 8%;
+    //     margin-right: 8%;
+    // }  
+}
+
+@media (max-width: 1000px) {
+    th, td {
+        font-size: 14px;
+        padding: 5px;
+        width: 200px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+@media (max-width: 1000px) {
+    th, td {
+        font-size: 14px;
+        padding: 5px;
+        width: 200px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+    
+    .sectionContainer {
+        @include mq(1000px) {
+            height: 100%;
+            // margin-left: 5%;
+            // margin-right: 5%;
+          }
+    }
+}
