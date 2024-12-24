@@ -308,6 +308,12 @@ h1 {
   display: block;
 }
 
+@media only screen and (max-width: 767px) {
+  .sectionContainer {
+    height: 100% !important;
+  }
+}
+
 #chat.light-mode {
   background-color: #c5c5c5;
   color: #191C1D;
