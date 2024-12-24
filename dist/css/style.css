@@ -304,11 +304,11 @@ h1 {
   margin: 5px;
   border-radius: 30px;
   flex: 1 1 75%;
-  height: 100%;
+  height: calc(100vh - 55px);
   display: block;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .sectionContainer {
     height: 100% !important;
   }
