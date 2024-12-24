@@ -1,0 +1,54 @@
+.staticBar {
+  --light: #b8b9bb;
+  --dark: #28292c;  
+}
+
+#themeSlider {
+  position: absolute;
+  display: none;
+}
+
+.switch {
+  display: flex;
+  justify-content: end;
+  width: 60px;
+  height: 30px;
+  margin: 10px;
+  margin-left: auto;
+  background-color: var(--dark);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+#themeSlider:checked ~ .slider {
+  background-color: var(--light);
+  width: 60px;
+  height: 30px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 3.9px;
+  left: 4.8px;
+  width: 22.5px;
+  height: 22.5px;
+  border-radius: 50%;
+  box-shadow: inset 7px -1px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+#themeSlider:checked ~ .slider::before {
+  transform: translateX(28.5px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
