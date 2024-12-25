@@ -1,4 +1,6 @@
 $background-color: #ffffff;
+$background-color-dark: #ffffff;
+
 $payment-container-color: #ecf4fe;
 $text-color: rgb(0, 0, 0);
 $static-bar-color: blue;
@@ -15,6 +17,11 @@ $payment-checkout-container-color:#e0efff;
     box-sizing: border-box;
 }
 
+.dark-mode {
+    body {
+        background-color: black;
+    }
+}
 
 .weather-info{
     color: black;
@@ -37,6 +44,7 @@ table, th, td {
     // overflow: hidden;
     // display: grid;
     padding: 10px;
+    overflow-x: auto;
 }
 th, td {
     border-left: 1px solid black;
@@ -54,16 +62,16 @@ th:last-child, td:last-child {
 // }
 
 option:hover {
-    background-color: #e1ecf7;
+    background-color: #c0cfe0;
 }
 
 option:active {
-    background-color: #daecfd;
+    background-color: #b5cde6;
     color: black;
 }
 
 option:checked {
-    box-shadow: 0 0 10px 100px #daecfd inset;
+    box-shadow: 0 0 10px 100px #b5cde6 inset;
     color: black;
 }
 
@@ -76,7 +84,7 @@ option {
 }
 
 option:focus {
-    background-color: #daecfd;
+    background-color: #b5cde6;
     color: black;
 }
 
@@ -92,6 +100,7 @@ body {
     background-color: $background-color;
     // height: 100%;
 }
+
 
 .paymentMethods {
     display: inline;

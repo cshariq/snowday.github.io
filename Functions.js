@@ -61,7 +61,7 @@ function calculateSnowDayChance(data) {
   const forecastDay = data.fcstdaily10short.forecasts[1];
 
   if (!forecastDay.metric.snow_qpf === 0) {
-    chance += 30 * Math.min(forecastDay.metric.snow_qpf / 7.6, 1);
+    chance += 15 * Math.min(forecastDay.metric.snow_qpf / 7.6, 1);
 
     if (forecastDay.metric.max_temp <= 3) {
       chance += 5;
@@ -72,12 +72,13 @@ function calculateSnowDayChance(data) {
     if (forecastDay.day.precip_type === 'snow' || forecastDay.day.precip_type === 'freezing rain') {
       chance += 10;
     }  else {
-      chance -= 20;
+      chance -= 10;
     }
 
     const forecast = data.fcsthourly24short.forecasts[timeLeft];
-    chance += 30 * Math.min(forecast.metric.snow_qpf / 2.5, 1);
-
+    chance += 20 * Math.min(forecast.pop / 100, 1)
+    chance += 15 * Math.min(forecast.metric.snow_qpf / 2.5, 1);
+    chance += 10 * Math.min(forecast.clds / 100, 1);
     if (forecast.metric.temp <= 2) {
       chance += 5;
     }
@@ -87,10 +88,16 @@ function calculateSnowDayChance(data) {
     if (forecast.precip_type === 'snow' || forecast.precip_type === 'freezing rain') {
       chance += 10;
     }  else {
-      chance -= 10;
+      chance -= 15;
     }
   }
-
+  if (!chance >= 85) {
+    var inputValue = document.getElementById('integerInput').value; 
+    if (!inputValue === '') { 
+      chance -= inputValue*2
+    }
+  }
+  chance = Math.max(chance, 0)
   return Math.round(chance);
 }
 
@@ -114,7 +121,7 @@ function processWeatherData(data) {
       console.warn(`No data for ${day}`);
       return;
     }
-
+    
     const forecastDay = forecast[index + 1];
     let chance = 0;
 
@@ -133,7 +140,13 @@ function processWeatherData(data) {
       } else {
         chance -= 10;
       }
-
+      if (!chance >= 85) {
+        var inputValue = document.getElementById('integerInput').value; 
+        if (!inputValue === '') { 
+          chance -= inputValue*2
+        }
+      }
+      chance = Math.max(chance, 0)
       chance = Math.round(chance);
     }
 
@@ -216,4 +229,38 @@ async function switchSession() {
     fetchWeather(url);
   }
 }
+
+function checkEnter(event) {
+  if (event.key === 'Enter' && document.querySelector('.textbox').value.trim() !== '') {
+    switchSession()
+  }
+  if (document.querySelector('.textbox').value.trim() == '') {
+      document.getElementById('chat-button').style.display = 'none';
+  } else {
+      document.getElementById('chat-button').style.display = 'flex';
+  }
+  const textbox = document.querySelector('.textbox');
+
+  textbox.addEventListener('input', () => {
+      if (textbox.value.trim() === '') {
+          document.getElementById('chat-button').style.display = 'none';
+      } else {
+          document.getElementById('chat-button').style.display = 'flex';
+      }
+  });
+}
+
+function enter() { 
+  switchSession()
+}
+
+function clearInput() { 
+  document.getElementById('integerInput').value = ''; 
+  document.getElementById('chat-button').style.display = 'none';
+}
+
+function toggleMode() { 
+  document.body.classList.toggle('dark-mode'); 
+}
+
 fetchWeatherData();

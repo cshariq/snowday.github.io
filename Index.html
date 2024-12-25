@@ -29,6 +29,7 @@
     <main>
         <section class="paymentContainer" style="background-color: #ecf4fe; padding: 5px; border-radius: 20px;">
             <div class="sectionContainer" id="camera">
+                
                 <span class="recent-text">Locations</span>
                 <select size="2" id="sessions" onchange="switchSession()" style="font-family: 'Montserrat', sans-serif; padding: 15px;border-radius: 10px; outline: none; border: none; border-width: 0; max-width: 100%; height: 90%; display: block; width: 100%; background-color: #e0efff; color: black;">
                     <option selected="selected" value="0">Automatic</option>
@@ -40,6 +41,12 @@
                     <option value="6">San Francisco</option>
                     <option value="7">Los Angeles</option>
                 </select>
+                <div class ='toggle-switch' onclick="toggleMode()">
+                    <label class="label-1">
+                        <input class="input-1" type = 'checkbox'>
+                        <span class = 'slider'></span>
+                    </label>
+                </div>
             </div>
 
             <div class="sectionContainer" id="chat">
@@ -51,74 +58,86 @@
                         <!-- <div style="position: relative; display: inline-block; cursor: pointer;" onclick="startLoading()">                                  -->
                     </div>
                 <div class="table-holder">
-                    <table class="weather-info">
-                        <tr id="dow">
-                        </tr>
-                        <tr class="table-elements" id="chance"> 
-                            <td class="column-elements" >
-                                <div id="chance-element-1">Snow day chance</div>
-                                <div class="chat-container">
-                                    <div class="container" id="daily-scale">
-                                        <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-1"></span>
+                    <div class="scrollable-table">
+                        <table class="weather-info">
+                            <tr id="dow">
+                            </tr>
+                            <tr class="table-elements" id="chance"> 
+                                <td class="column-elements" >
+                                    <div id="chance-element-1">Snow day chance</div>
+                                    <div class="chat-container">
+                                        <div class="container" id="daily-scale">
+                                            <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-1"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td class="column-elements" >
-                                <div id="chance-element-2">Snow day chance</div>
-                                <div class="chat-container">
-                                    <div class="container" id="daily-scale">
-                                        <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-2"></span>
+                                </td>
+                                <td class="column-elements" >
+                                    <div id="chance-element-2">Snow day chance</div>
+                                    <div class="chat-container">
+                                        <div class="container" id="daily-scale">
+                                            <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-2"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td class="column-elements" >
-                                <div id="chance-element-3">Snow day chance</div>
-                                <div class="chat-container">
-                                    <div class="container" id="daily-scale">
-                                        <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-3"></span>
+                                </td>
+                                <td class="column-elements" >
+                                    <div id="chance-element-3">Snow day chance</div>
+                                    <div class="chat-container">
+                                        <div class="container" id="daily-scale">
+                                            <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-3"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td class="column-elements" >
-                                <div id="chance-element-4">Snow day chance</div>
-                                <div class="chat-container">
-                                    <div class="container" id="daily-scale">
-                                        <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-4"></span>
+                                </td>
+                                <td class="column-elements" >
+                                    <div id="chance-element-4">Snow day chance</div>
+                                    <div class="chat-container">
+                                        <div class="container" id="daily-scale">
+                                            <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-4"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td class="column-elements" >
-                                <div id="chance-element-5">Snow day chance</div>
-                                <div class="chat-container">
-                                    <div class="container" id="daily-scale">
-                                        <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-5"></span>
+                                </td>
+                                <td class="column-elements" >
+                                    <div id="chance-element-5">Snow day chance</div>
+                                    <div class="chat-container">
+                                        <div class="container" id="daily-scale">
+                                            <span style="--meter-value: 75;" class="progress-bar" id="progress-bar-5"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="table-elements" id="perciptattion-chance">
-                        </tr>
-                        <tr class="table-elements" id="perciptattion">
-                        </tr>
-                        <tr class="table-elements" id="wind">
-                        </tr>
-                        <tr class="table-elements" id="temp"> 
-                        </tr>
-                        <tr class="table-elements" id="visibility">
-                        </tr>
-                        <tr class="table-elements" id="uv-index">
-                        </tr>
-                        <tr class="table-elements" id="visibility">
-                        </tr>
-                    </table>
+                                </td>
+                            </tr>
+                            <tr class="table-elements" id="perciptattion-chance">
+                            </tr>
+                            <tr class="table-elements" id="perciptattion">
+                            </tr>
+                            <tr class="table-elements" id="wind">
+                            </tr>
+                            <tr class="table-elements" id="temp"> 
+                            </tr>
+                            <tr class="table-elements" id="visibility">
+                            </tr>
+                            <tr class="table-elements" id="uv-index">
+                            </tr>
+                            <tr class="table-elements" id="visibility">
+                            </tr>
+                        </table>
                     </div>
-                    <!-- <div class="container">  -->
-                        <!-- <span style="--meter-value: 75;" class="progress-bar" id="progress-bar"></span> -->
-                        
+                        <h3 class="snowday-text">Snowdays this year</h3>
+                        <div class="container-2" id="chatbox">
+                            
+                            <input id="integerInput" class="textbox" type="number" min="0" step="1" placeholder="Enter amount of snowdays" onkeydown="checkEnter(event)">
+                            <div style="position: relative; display: inline-block; cursor: pointer;">                                
+                                <button class="chat-button" id="chat-button">
+                                    <span class="material-symbols-outlined" id="chatIcons" onclick="enter()">send</span> 
+                                    <span class="material-symbols-outlined" id="chatIcons" style="margin: 10px;" onclick="clearInput()">cancel</span> 
+                                </button>
+                            </div>
+                        </div>
+                    <!-- <div class="container"> 
+                        <div class="textbox" placeholder="Enter Answer" onkeydown="checkEnter(event)">
                         <div style="position: relative; display: inline-block; cursor: pointer;" onclick="startLoading()">                                 
-                    <!-- </div> -->
-                </div>
-                <div class="textbox" placeholder="Enter Answer" onkeydown="checkEnter(event)"></div>
+                    </div>
+                    </div>
+                    
+                </div> -->
             </div>
         </section>
         <div id="snackbar"></div>
