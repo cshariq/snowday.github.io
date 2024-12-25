@@ -1,5 +1,6 @@
 #camera {
     background-color: $payment-checkout-container-color;
+    transition: background-color 1s;
     flex: 1 1 20%;
     // height: 100%;
 }

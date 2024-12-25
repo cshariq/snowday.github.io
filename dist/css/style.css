@@ -8,6 +8,7 @@
   color: black;
   width: 100%;
   text-align: center;
+  transition: background-color 1s;
 }
 
 .table-elements {
@@ -43,15 +44,18 @@ th:last-child, td:last-child {
 
 option:hover {
   background-color: #c0cfe0;
+  transition: background-color 1s;
 }
 
 option:active {
   background-color: #b5cde6;
+  transition: background-color 1s;
   color: black;
 }
 
 option:checked {
   box-shadow: 0 0 10px 100px #b5cde6 inset;
+  transition: background-color 1s;
   color: black;
 }
 
@@ -65,6 +69,7 @@ option {
 
 option:focus {
   background-color: #b5cde6;
+  transition: background-color 1s;
   color: black;
 }
 
@@ -78,15 +83,17 @@ html, body {
 
 body {
   background-color: #ffffff;
-  transition: background-color 0.3s;
+  transition: background-color 1s;
 }
 
 .paymentContainer {
   background-color: #ecf4fe;
+  transition: background-color 1s;
 }
 
 #sessions {
   background-color: #e0efff;
+  transition: background-color 1s;
 }
 
 .dark-modes {
@@ -279,6 +286,7 @@ h1 {
   left: 50%; /* Center the snackbar */
   bottom: 30px; /* 30px from the bottom */
   border-radius: 100px;
+  transition: background-color 1s;
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -312,6 +320,7 @@ h1 {
 }
 #camera {
   background-color: #e0efff;
+  transition: background-color 1s;
   flex: 1 1 20%;
 }
 
@@ -425,6 +434,7 @@ h1 {
   font-weight: 300;
   text-decoration-color: aquamarine;
   background-color: #ecf4fe;
+  transition: background-color 1s;
   padding: 1rem;
   margin: 5px;
   border-radius: 30px;
@@ -509,6 +519,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 1s;
 }
 
 @media (max-width: 500px) {
@@ -572,6 +583,7 @@ h1 {
 }
 
 .table-holder {
+  transition: background-color 1s;
   padding: 30px;
   padding-top: 40px;
   border-radius: 30px;
@@ -611,6 +623,7 @@ h1 {
   background-color: #212121;
   border-radius: 100px;
   padding: 10px;
+  transition: background-color 1s;
 }
 
 #daily-scale {

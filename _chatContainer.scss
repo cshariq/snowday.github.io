@@ -16,6 +16,7 @@ $text-box-color: #000000;
   font-weight: 300;
   text-decoration-color: aquamarine;
   background-color: $payment-container-color;
+  transition: background-color 1s;
   padding: 1rem;
   margin: 5px;
   border-radius: 30px;
@@ -101,6 +102,7 @@ $text-box-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 1s;
 }
 @media (max-width: 500px) {
   .container-2 {
@@ -159,6 +161,7 @@ $text-box-color: #000000;
 }
 
 .table-holder {
+  transition: background-color 1s;
   padding:30px;
   padding-top: 40px;
   border-radius:30px;
@@ -197,6 +200,7 @@ $text-box-color: #000000;
   background-color: #212121;
   border-radius: 100px;
   padding: 10px;
+  transition: background-color 1s;
 }
 
 #daily-scale {
