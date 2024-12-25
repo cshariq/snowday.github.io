@@ -17,12 +17,6 @@ $payment-checkout-container-color:#e0efff;
     box-sizing: border-box;
 }
 
-.dark-mode {
-    body {
-        background-color: black;
-    }
-}
-
 .weather-info{
     color: black;
     width: 100%;
@@ -98,7 +92,81 @@ html, body {
 
 body {
     background-color: $background-color;
+    transition: background-color 0.3s;
     // height: 100%;
+}
+.paymentContainer {
+    background-color: #ecf4fe;
+}
+
+#sessions {
+    background-color: #e0efff;
+}
+
+.dark-modes {
+    body{
+        background-color: black;
+        color: white;
+    }
+    .sectionContainer {
+        background-color: #1c252d;
+        color: white;
+    }
+    .paymentContainer {
+        background-color: #1c252d;
+    }
+
+    .table-holder {
+        background-color: #181e24;
+        color: white;
+    }
+    .weather-info {
+        color: white;
+    }
+    .container {
+        background-color: rgb(92, 111, 128);
+    }
+    #sessions {
+        background-color: #2e363e;
+        color: white;
+    }
+    #camera {
+        background-color: #2e363e;
+    }
+    .percentage-text {
+        color: #ecf4fe;
+    }
+    option {
+        color: rgb(233, 233, 233);
+    }
+    option:focus {
+        background-color: #676e85;
+        color: rgb(255, 255, 255);
+    }
+    option:hover {
+        background-color: #575f68;
+    }
+    
+    option:active {
+        background-color: #676e85;
+        color: rgb(255, 255, 255);
+    }
+    
+    option:checked {
+        box-shadow: 0 0 10px 1000px #676e85 inset;
+        color: rgb(255, 255, 255);
+    }
+    .recent-text {
+        color: white;
+    }
+    .container-2 {
+        background-color: #31373d;
+    }
+    #snackbar{
+        background-color: #e0efff;
+        color: black;
+    }
+    background-color: black;
 }
 
 

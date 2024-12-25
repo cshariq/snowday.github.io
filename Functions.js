@@ -259,8 +259,13 @@ function clearInput() {
   document.getElementById('chat-button').style.display = 'none';
 }
 
-function toggleMode() { 
-  document.body.classList.toggle('dark-mode'); 
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-modes");
+  // document.body.classList.toggle("dark-modes");
 }
+
+var sub = document.getElementById("dark-slider");
+sub.addEventListener("click", js);
 
 fetchWeatherData();

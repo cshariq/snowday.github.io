@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-.dark-mode body {
-  background-color: black;
-}
-
 .weather-info {
   color: black;
   width: 100%;
@@ -82,6 +78,78 @@ html, body {
 
 body {
   background-color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.paymentContainer {
+  background-color: #ecf4fe;
+}
+
+#sessions {
+  background-color: #e0efff;
+}
+
+.dark-modes {
+  background-color: black;
+}
+.dark-modes body {
+  background-color: black;
+  color: white;
+}
+.dark-modes .sectionContainer {
+  background-color: #1c252d;
+  color: white;
+}
+.dark-modes .paymentContainer {
+  background-color: #1c252d;
+}
+.dark-modes .table-holder {
+  background-color: #181e24;
+  color: white;
+}
+.dark-modes .weather-info {
+  color: white;
+}
+.dark-modes .container {
+  background-color: rgb(92, 111, 128);
+}
+.dark-modes #sessions {
+  background-color: #2e363e;
+  color: white;
+}
+.dark-modes #camera {
+  background-color: #2e363e;
+}
+.dark-modes .percentage-text {
+  color: #ecf4fe;
+}
+.dark-modes option {
+  color: rgb(233, 233, 233);
+}
+.dark-modes option:focus {
+  background-color: #676e85;
+  color: rgb(255, 255, 255);
+}
+.dark-modes option:hover {
+  background-color: #575f68;
+}
+.dark-modes option:active {
+  background-color: #676e85;
+  color: rgb(255, 255, 255);
+}
+.dark-modes option:checked {
+  box-shadow: 0 0 10px 1000px #676e85 inset;
+  color: rgb(255, 255, 255);
+}
+.dark-modes .recent-text {
+  color: white;
+}
+.dark-modes .container-2 {
+  background-color: #31373d;
+}
+.dark-modes #snackbar {
+  background-color: #e0efff;
+  color: black;
 }
 
 .paymentMethods {
