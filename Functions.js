@@ -265,5 +265,3 @@ function myFunction() {
   // document.body.classList.toggle("dark-modes");
 }
 fetchWeatherData();
-var sub = document.getElementById("dark-slider");
-sub.addEventListener("click", js);
