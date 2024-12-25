@@ -264,4 +264,5 @@ function myFunction() {
   element.classList.toggle("dark-modes");
   // document.body.classList.toggle("dark-modes");
 }
+
 fetchWeatherData();

@@ -512,7 +512,7 @@ h1 {
 }
 
 @media (max-width: 500px) {
-  .toggle-switch {
+  .container-2 {
     width: 100%;
   }
 }
