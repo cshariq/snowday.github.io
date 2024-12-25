@@ -278,5 +278,5 @@ function applyDeviceTheme() {
   });
 }
 
-applyDeviceTheme();
+//applyDeviceTheme();
 fetchWeatherData();
