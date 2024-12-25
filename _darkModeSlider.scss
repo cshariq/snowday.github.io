@@ -6,10 +6,15 @@
 }
 
 .toggle-switch {
+  display: block;
   position: relative;
   width: 80px; /* 200px / 2.5 */
 }
-
+@media (max-width: 1000px) {
+  .toggle-switch {
+    display: none;
+  }
+}
 .label-1 {
   position: absolute;
   width: 100%;

@@ -359,10 +359,16 @@ h1 {
 }
 
 .toggle-switch {
+  display: block;
   position: relative;
   width: 80px; /* 200px / 2.5 */
 }
 
+@media (max-width: 1000px) {
+  .toggle-switch {
+    display: none;
+  }
+}
 .label-1 {
   position: absolute;
   width: 100%;
@@ -487,6 +493,11 @@ h1 {
   font-size: 20px;
 }
 
+@media (max-width: 500px) {
+  .snowday-text {
+    text-align: center;
+  }
+}
 .container-2 {
   width: 500px;
   margin-top: 10px;
@@ -500,6 +511,11 @@ h1 {
   justify-content: center;
 }
 
+@media (max-width: 500px) {
+  .toggle-switch {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 1300px) {
   .sectionContainer {
     margin-top: 15px;

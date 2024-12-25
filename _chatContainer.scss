@@ -84,7 +84,11 @@ $text-box-color: #000000;
   text-align: left;
   font-size:20px;
 }
-
+@media (max-width: 500px) {
+  .snowday-text {
+    text-align: center;
+  }
+}
 .container-2 {
   width: 500px;
   margin-top: 10px;
@@ -97,6 +101,11 @@ $text-box-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 500px) {
+  .toggle-switch {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1300px) { 
