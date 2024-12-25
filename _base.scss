@@ -21,7 +21,7 @@ $payment-checkout-container-color:#e0efff;
     color: black;
     width: 100%;
     text-align: center;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
 }
 
 .table-elements{
@@ -58,18 +58,18 @@ th:last-child, td:last-child {
 
 option:hover {
     background-color: #c0cfe0;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
 }
 
 option:active {
     background-color: #b5cde6;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     color: black;
 }
 
 option:checked {
     box-shadow: 0 0 10px 100px #b5cde6 inset;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     color: black;
 }
 
@@ -83,7 +83,7 @@ option {
 
 option:focus {
     background-color: #b5cde6;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     color: black;
 }
 
@@ -97,17 +97,17 @@ html, body {
 
 body {
     background-color: $background-color;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     // height: 100%;
 }
 .paymentContainer {
     background-color: #ecf4fe;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
 }
 
 #sessions {
     background-color: #e0efff;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
 }
 
 .dark-modes {
