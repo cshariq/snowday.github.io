@@ -197,12 +197,18 @@ async function switchSession() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         const url = `https://api.weather.com/v1/geocode/${latitude}/${longitude}/aggregate.json?apiKey=e45ff1b7c7bda231216c7ab7c33509b8&products=conditionsshort,fcstdaily10short,fcsthourly24short,nowlinks`;
-
+  
         fetchWeather(url);
       },
       (error) => {
-        console.error('Error getting location:', error);
-      }
+        var x = document.getElementById("snackbar");
+        document.getElementById("snackbar").innerText = `Error: ${error}`;
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        const url = `https://api.weather.com/v1/geocode/45.42381580972502/-75.70084317193432/aggregate.json?apiKey=e45ff1b7c7bda231216c7ab7c33509b8&products=conditionsshort,fcstdaily10short,fcsthourly24short,nowlinks`;
+  
+        fetchWeather(url);
+      }, {enableHighAccuracy: true, timeout: 5000}
     );
   } else {
     const location = locations[selectedValue];
