@@ -265,4 +265,18 @@ function myFunction() {
   // document.body.classList.toggle("dark-modes");
 }
 
+function applyDeviceTheme() {
+
+  // Check the initial preference
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    myFunction()
+  }
+
+  // Listen for changes to the preference
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    myFunction()
+  });
+}
+
+applyDeviceTheme();
 fetchWeatherData();
