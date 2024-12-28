@@ -88,7 +88,7 @@ function calculateSnowDayChance(data) {
     chance += 5 * Math.min(forecast.metric.wspd / 16, 1);
 
     if (forecast.precip_type === 'snow' || forecast.precip_type === 'freezing rain') {
-      chance += 10;
+      chance += 5;
     }  else {
       chance -= 15;
     }
@@ -128,8 +128,8 @@ function processWeatherData(data) {
     let chance = 0;
 
     if (forecastDay.day.pop >= 60) {
-      chance += 40 * Math.min(forecastDay.metric.snow_qpf / 7.6, 1);
-      chance += 40 * Math.min(forecastDay.day.pop / 100, 1);
+      chance += 35 * Math.min(forecastDay.metric.snow_qpf / 7.6, 1);
+      chance += 35 * Math.min(forecastDay.day.pop / 100, 1);
 
       if (forecastDay.metric.max_temp <= 3) {
         chance += 10;
